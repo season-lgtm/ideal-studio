@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://season-lgtm.github.io/ideal-studio/sitemap.xml
