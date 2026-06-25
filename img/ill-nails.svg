@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340"><rect width="600" height="340" fill="#FBE6EF"/>
+<g fill="#EFA8C6"><path d="M86 96 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5Z"/><path d="M498 216 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4Z"/></g>
+<g fill="#F2A9C4"><circle cx="128" cy="250" r="5"/><circle cx="486" cy="98" r="4"/></g>
+<g stroke="#E27BA0" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<rect x="270" y="150" width="60" height="86" rx="12" fill="#F7C6DB"/>
+<rect x="284" y="124" width="32" height="30" rx="5" fill="#FBD2E3"/></g>
+<rect x="287" y="98" width="26" height="28" rx="6" fill="#E27BA0"/>
+<g stroke="#E27BA0" stroke-width="3" fill="#EE9CBC"><ellipse cx="186" cy="200" rx="16" ry="22"/><ellipse cx="418" cy="194" rx="15" ry="21"/></g>
+<g fill="#F7B8D2"><ellipse cx="186" cy="194" rx="9" ry="11"/><ellipse cx="418" cy="188" rx="8" ry="10"/></g>
+<path d="M300 196 q-9 -12 -18 -2 q-6 7 1 15 l17 16 l17 -16 q7 -8 1 -15 q-9 -10 -18 2Z" fill="#EE9CBC"/></svg>
