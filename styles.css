@@ -240,4 +240,4 @@ footer .fbottom{border-top:1px solid rgba(255,255,255,.1);margin-top:28px;paddin
 .card:hover .cardimg img{transform:none;}
 .svc-banner img{object-fit:contain;background:#FBE6EF;height:300px;}
 .about-img img{object-fit:contain;background:#FBE6EF;height:300px;}
-.hero-photo>img{object-fit:contain;background:#FBE6EF;box-shadow:0 22px 50px rgba(226,123,160,.22);}
+.hero-photo>img{object-fit:cover;box-shadow:0 22px 50px rgba(226,123,160,.22);}
