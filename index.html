@@ -7,163 +7,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --rose:#F19FC1; --rose-deep:#E27BA0; --magenta:#E486AB;
-    --ink:#4A3A41; --sub:#a8929c; --line:#FBE3EE; --tint:#FDEFF6; --tint2:#FBE4EE;
-    --cream:#FFF8FB; --wa:#25D366;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{font-family:'Poppins',sans-serif;color:var(--ink);background:#fff;line-height:1.6;}
-  img,svg{display:block;}
-  a{color:inherit;text-decoration:none;}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 22px;}
-  .cn{font-family:'Noto Sans SC',sans-serif;}
-  .script{font-family:'Pacifico',cursive;color:var(--rose-deep);}
-  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;
-    padding:13px 24px;border-radius:40px;cursor:pointer;border:none;transition:.2s;white-space:nowrap;}
-  .btn-primary{background:var(--rose-deep);color:#fff;letter-spacing:.3px;}
-  .btn-primary:hover{background:#D2698F;}
-  .btn-wa{background:var(--wa);color:#fff;}
-  .btn-wa:hover{filter:brightness(.95);}
-  .btn-ghost{background:#fff;color:var(--rose-deep);border:1.5px solid var(--rose);}
-  .btn-ghost:hover{background:var(--tint);}
-  .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:600;}
-  .h2{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.15;margin:8px 0 6px;}
-  .lead{color:var(--sub);font-size:16px;max-width:620px;}
-  section{padding:78px 0;}
-  .center{text-align:center;}
-  .center .lead{margin:0 auto;}
-
-  /* NAV */
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
-  .brand{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:5px;font-size:19px;color:var(--ink);}
-  .brand small{display:block;font-family:'Pacifico',cursive;letter-spacing:0;font-size:13px;color:var(--rose-deep);font-weight:400;margin-top:-3px;}
-  .navlinks{display:flex;align-items:center;gap:28px;}
-  .navlinks a{font-size:14.5px;font-weight:500;color:#5b5458;}
-  .navlinks a:hover{color:var(--rose-deep);}
-  .nav .btn{padding:10px 18px;font-size:14px;}
-  .menutoggle{display:none;background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;}
-
-  /* HERO */
-  .hero{background:linear-gradient(180deg,var(--cream),#fff);position:relative;overflow:hidden;padding:70px 0 60px;}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
-  .hero h1{font-family:'Playfair Display',serif;font-size:54px;line-height:1.07;font-weight:700;}
-  .hero h1 .script{font-size:60px;display:inline-block;}
-  .hero p.tag{margin-top:18px;font-size:18px;color:#6b6368;}
-  .hero p.tag .cn{color:var(--rose-deep);}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px;}
-  .chip{background:var(--tint);color:var(--rose-deep);font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:30px;letter-spacing:.5px;}
-  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
-  .hero-art{display:flex;justify-content:center;}
-  .blob{background:radial-gradient(circle at 50% 40%,var(--tint2),var(--tint));border-radius:50%;width:330px;height:330px;display:flex;align-items:center;justify-content:center;position:relative;}
-  .blob .sparkle{position:absolute;}
-
-  /* TRUST */
-  .trust{background:var(--magenta);color:#fff;}
-  .trust .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;padding:18px 22px;text-align:center;}
-  .trust b{font-weight:700;letter-spacing:1px;font-size:15px;}
-  .trust .cn{opacity:.9;font-weight:400;}
-
-  /* SERVICES */
-  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px;}
-  .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 22px;transition:.2s;}
-  .card:hover{box-shadow:0 14px 34px rgba(216,95,140,.14);transform:translateY(-4px);}
-  .card .ico{width:58px;height:58px;border-radius:16px;background:var(--tint);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-  .card h3{font-family:'Playfair Display',serif;font-size:21px;font-weight:600;}
-  .card h3 .cn{font-family:'Noto Sans SC';font-size:15px;color:var(--rose-deep);font-weight:500;margin-left:6px;}
-  .card p{font-size:13.5px;color:var(--sub);margin-top:7px;}
-  .card .from{margin-top:14px;font-size:13px;color:var(--rose-deep);font-weight:600;}
-
-  /* PRICING */
-  .pricing{background:var(--cream);}
-  .tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:34px 0 30px;}
-  .tab{padding:10px 22px;border-radius:30px;background:#fff;border:1.5px solid var(--line);font-weight:600;font-size:14.5px;color:#6b6368;cursor:pointer;transition:.18s;}
-  .tab.active{background:var(--rose);color:#fff;border-color:var(--rose);}
-  .panel{display:none;max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px 30px;}
-  .panel.active{display:block;}
-  .panel .sub{font-size:13px;color:var(--sub);padding:14px 0 6px;}
-  .prow{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);}
-  .prow:last-child{border-bottom:none;}
-  .pname{font-size:15px;font-weight:600;}
-  .pname .lt{font-weight:400;color:#857d81;font-size:13px;}
-  .pname small{display:block;font-family:'Noto Sans SC';font-weight:400;color:var(--sub);font-size:12.5px;margin-top:1px;}
-  .pprice{font-weight:700;white-space:nowrap;color:var(--ink);}
-  .pgroup{font-weight:700;color:var(--rose-deep);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;padding:16px 0 2px;}
-  .note-line{font-size:12.5px;color:var(--rose-deep);background:var(--tint);border-radius:10px;padding:9px 14px;margin:10px 0;}
-
-  /* BOOKING */
-  .booking{background:linear-gradient(180deg,#fff,var(--cream));}
-  .book-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;margin-top:38px;}
-  .book-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 12px 40px rgba(216,95,140,.08);}
-  .field{margin-bottom:18px;}
-  .field label{display:block;font-size:13px;font-weight:600;color:#5b5458;margin-bottom:7px;}
-  .field select,.field input{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:15px;color:var(--ink);background:#fff;}
-  .field select:focus,.field input:focus{outline:none;border-color:var(--rose);}
-  .slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
-  .slot{padding:9px 0;text-align:center;border:1.5px solid var(--line);border-radius:10px;font-size:13.5px;font-weight:600;color:#5b5458;cursor:pointer;transition:.15s;}
-  .slot:hover{border-color:var(--rose);color:var(--rose-deep);}
-  .slot.sel{background:var(--rose);color:#fff;border-color:var(--rose);}
-  .slot.gone{opacity:.4;text-decoration:line-through;cursor:not-allowed;}
-  .book-card .btn{width:100%;justify-content:center;margin-top:6px;}
-  .syncbox{background:var(--tint);border-radius:18px;padding:26px;}
-  .syncbox h4{font-family:'Playfair Display',serif;font-size:20px;margin-bottom:6px;}
-  .syncbox ul{list-style:none;margin-top:14px;}
-  .syncbox li{font-size:14px;color:#5b5458;padding:8px 0 8px 28px;position:relative;}
-  .syncbox li::before{content:"✓";position:absolute;left:0;color:var(--rose);font-weight:700;}
-  .tagpill{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--rose-deep);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;margin-top:10px;}
-
-  /* WHY */
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:38px;}
-  .why{padding:6px 4px;}
-  .why .n{font-family:'Playfair Display',serif;font-size:30px;color:var(--rose);}
-  .why h4{font-size:17px;margin:6px 0 4px;}
-  .why p{font-size:13.5px;color:var(--sub);}
-
-  /* CONTACT */
-  .contact{background:var(--magenta);color:#fff;}
-  .contact .h2{color:#fff;}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:30px;}
-  .contact a.big{display:inline-flex;align-items:center;gap:10px;font-size:20px;font-weight:600;margin:6px 0;}
-  .contact .meta{opacity:.92;font-size:14.5px;line-height:1.9;}
-  .hours{background:rgba(255,255,255,.1);border-radius:18px;padding:24px;}
-  .hours div{display:flex;justify-content:space-between;padding:6px 0;font-size:14.5px;border-bottom:1px solid rgba(255,255,255,.15);}
-  .hours div:last-child{border-bottom:none;}
-
-  footer{background:#2b2629;color:#cbbfc4;padding:40px 0;text-align:center;}
-  footer .brand{color:#fff;justify-content:center;}
-  footer .fl{display:flex;gap:22px;justify-content:center;margin:16px 0;flex-wrap:wrap;}
-  footer .fl a{font-size:13.5px;color:#cbbfc4;}
-  footer small{font-size:12px;opacity:.6;display:block;margin-top:10px;}
-
-  .float-wa{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(94,146,119,.4);}
-
-  @media(max-width:860px){
-    .hero-grid,.book-grid,.contact-grid{grid-template-columns:1fr;}
-    .hero-art{order:-1;}
-    .cards,.why-grid{grid-template-columns:1fr 1fr;}
-    .navlinks{display:none;}
-    .menutoggle{display:block;}
-    .h2{font-size:30px;} .hero h1{font-size:40px;} .hero h1 .script{font-size:44px;}
-    section{padding:56px 0;}
-  }
-  @media(max-width:520px){
-    .cards,.why-grid{grid-template-columns:1fr;}
-    .slots{grid-template-columns:repeat(3,1fr);}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
 <header>
   <div class="wrap nav">
-    <div class="brand">IDEAL STUDIO<small>Beauty Atelier</small></div>
+    <a href="index.html" class="brand">IDEAL STUDIO<small>Beauty Atelier</small></a>
     <nav class="navlinks">
       <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
+      <a href="pricing.html">Pricing</a>
       <a href="#book">Book</a>
       <a href="#contact">Contact</a>
       <a href="#book" class="btn btn-primary">Book Now</a>
@@ -174,10 +28,10 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+  <div class="wrap">
+    <div class="hero-inner">
       <span class="eyebrow">Facial · Brows · Lashes · Nails</span>
-      <h1>Only what your<br>skin <span class="script">really</span> needs.</h1>
+      <h1>Only what your skin <span class="script">really</span> needs.</h1>
       <p class="tag">Only what works &nbsp;·&nbsp; <span class="cn">只做有效的护理</span></p>
       <div class="chips">
         <span class="chip">NO MEMBERSHIP 无会员</span>
@@ -187,23 +41,6 @@
       <div class="hero-cta">
         <a href="#book" class="btn btn-primary">📅 Book an appointment</a>
         <a href="#wa" class="btn btn-wa">Chat on WhatsApp</a>
-      </div>
-    </div>
-    <div class="hero-art">
-      <div class="blob">
-        <svg width="240" height="220" viewBox="0 0 270 240" fill="none">
-          <g stroke="#E27BA0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M150 60 q-8 -34 30 -40 q44 -6 56 26 q8 22 -6 36" fill="#FBE6EE"/>
-            <path d="M236 46 q22 -10 24 8 q2 16 -18 14 q8 -12 -6 -22Z" fill="#F7D5E2"/>
-            <path d="M150 70 q-22 22 -16 60 q6 40 46 50 q44 10 64 -22 q16 -28 6 -64 q-8 -28 -40 -34 q-40 -8 -60 10Z" fill="#FFF3F7"/>
-            <path d="M168 120 q10 8 22 0"/><path d="M205 120 q10 8 22 0"/>
-            <circle cx="166" cy="150" r="8" fill="#F8C9DA" stroke="none"/>
-            <circle cx="230" cy="150" r="8" fill="#F8C9DA" stroke="none"/>
-            <path d="M186 158 q14 12 28 0"/>
-            <path d="M150 168 q-18 6 -22 26 q-2 14 10 18 q4 -16 18 -22 q10 -4 14 -14" fill="#FFF3F7"/>
-          </g>
-          <g fill="#EFA8C6"><path d="M60 40 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5Z"/><circle cx="40" cy="150" r="5"/><circle cx="240" cy="180" r="6"/></g>
-        </svg>
       </div>
     </div>
   </div>
@@ -225,7 +62,7 @@
     <p class="lead">We focus on what actually shows results — and we'll tell you what to skip.</p>
     <div class="cards" style="text-align:left">
       <div class="card">
-        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E27BA0" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M9 11q3 3 6 0" stroke-linecap="round"/><circle cx="9.5" cy="9.5" r=".6" fill="#D85F8C"/><circle cx="14.5" cy="9.5" r=".6" fill="#D85F8C"/></svg></div>
+        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E27BA0" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M9 11q3 3 6 0" stroke-linecap="round"/><circle cx="9.5" cy="9.5" r=".6" fill="#E27BA0"/><circle cx="14.5" cy="9.5" r=".6" fill="#E27BA0"/></svg></div>
         <h3>Facial <span class="cn">面部护理</span></h3>
         <p>Deep cleansing, hydration, anti-acne, lifting & bojin — with add-on boosters only if your skin needs them.</p>
         <div class="from">from $48</div>
@@ -249,92 +86,8 @@
         <div class="from">from $25</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="pricing">
-  <div class="wrap center">
-    <span class="eyebrow">Price List · 价目表</span>
-    <h2 class="h2">Transparent pricing</h2>
-    <p class="lead">No membership. No package. The price you see is the price you pay.</p>
-    <div class="tabs">
-      <button class="tab active" data-tab="facial">Facial 面部</button>
-      <button class="tab" data-tab="brows">Brows 纹眉</button>
-      <button class="tab" data-tab="lashes">Lashes 美睫</button>
-      <button class="tab" data-tab="nails">Nails 美甲</button>
-    </div>
-
-    <div class="panel active" id="facial" style="text-align:left">
-      <div class="pgroup">Facial Treatments 面部护理</div>
-      <div class="prow"><div class="pname">Express Clean <span class="lt">~35 min</span><small>快速净肤 · 双重清洁·去角质·清痘·面膜·SPF</small></div><div class="pprice">$48</div></div>
-      <div class="prow"><div class="pname">Deep Clean <span class="lt">~60 min</span><small>深层清洁 · 检测·蒸面·深层清痘·高周波·舒缓面膜</small></div><div class="pprice">$68</div></div>
-      <div class="note-line">First visit: Express Clean <b>$38</b> — once per person, weekday daytime · 首次体验 $38</div>
-      <div class="pgroup">Boosters 升级项目 <span class="lt" style="font-weight:400;text-transform:none;letter-spacing:0">(add to any facial)</span></div>
-      <div class="prow"><div class="pname">LED Therapy <small>LED 红蓝光疗（祛痘/舒缓）</small></div><div class="pprice">+$18</div></div>
-      <div class="prow"><div class="pname">Hydra Resurfacing <small>水光焕肤（小气泡）</small></div><div class="pprice">+$28</div></div>
-      <div class="prow"><div class="pname">Brightening Ampoule + Mask <small>美白安瓶 + 面膜</small></div><div class="pprice">+$20</div></div>
-      <div class="prow"><div class="pname">Collagen Mask Upgrade <small>胶原修护面膜</small></div><div class="pprice">+$15</div></div>
-      <div class="prow"><div class="pname">Extra Extraction Time <small>加长清粉刺</small></div><div class="pprice">+$15</div></div>
-      <div class="pgroup">Mini-Treatments 单项护理 <span class="lt" style="font-weight:400;text-transform:none;letter-spacing:0">(own price / add-on)</span></div>
-      <div class="prow"><div class="pname">Firming &amp; Lifting <small>紧致提升</small></div><div class="pprice">$88 / $58</div></div>
-      <div class="prow"><div class="pname">Eye Treatment <small>眼部护理</small></div><div class="pprice">$48 / $28</div></div>
-      <div class="prow"><div class="pname">Face Bojin <small>脸部拨筋</small></div><div class="pprice">$78 / $38</div></div>
-      <div class="prow"><div class="pname">Head &amp; Shoulder Relaxation <small>头部放松护理</small></div><div class="pprice">$48 / $25</div></div>
-      <div class="prow"><div class="pname">Ear Candling Detox <small>耳烛淋巴排毒</small></div><div class="pprice">$38 / $25</div></div>
-      <div class="prow"><div class="pname">Neck &amp; Décolletage <small>颈部护理</small></div><div class="pprice">$40 / $22</div></div>
-      <div class="prow"><div class="pname">Back Treatment <small>背部护理</small></div><div class="pprice">$68</div></div>
-      <div class="note-line"><b>Signature · 招牌套餐</b> — 3-in-1 Care (Deep Clean + Eye + Face Bojin) 三合一护理 · <b>$118</b></div>
-    </div>
-
-    <div class="panel" id="brows" style="text-align:left">
-      <div class="pgroup">Brows 眉</div>
-      <div class="prow"><div class="pname">Microblading · Hair-Stroke Brows <small>仿真线条眉（野生眉）</small></div><div class="pprice">$188</div></div>
-      <div class="prow"><div class="pname">Powder / Misty Brows <small>韩式雾眉（粉黛眉）</small></div><div class="pprice">$298</div></div>
-      <div class="prow"><div class="pname">Combination Brows <small>丝雾眉（线条 + 雾）</small></div><div class="pprice">$388</div></div>
-      <div class="pgroup">Eyeliner 眼线</div>
-      <div class="prow"><div class="pname">Eyeliner — Upper &amp; Lower <small>半永久眼线（上 + 下）</small></div><div class="pprice">$350</div></div>
-      <div class="prow"><div class="pname">Eyeliner — Upper Only <small>半永久眼线（上）</small></div><div class="pprice">$198</div></div>
-      <div class="pgroup">Lips 唇</div>
-      <div class="prow"><div class="pname">Lip Blush — Monroe Red <small>半永久雾唇（梦露红）</small></div><div class="pprice">$300</div></div>
-      <div class="prow"><div class="pname">Gradient Crystal Lip <small>渐变水晶唇</small></div><div class="pprice">$388</div></div>
-      <div class="pgroup">Correction &amp; Removal 改色与洗除</div>
-      <div class="prow"><div class="pname">Brow Colour Correction <small>旧眉改色（红/蓝调修正）</small></div><div class="pprice">from $188</div></div>
-      <div class="prow"><div class="pname">Dark Lip Correction <small>唇部改色（暗唇）</small></div><div class="pprice">$300</div></div>
-      <div class="prow"><div class="pname">Removal — Brows / Eyeliner <small>洗眉 / 洗眼线</small></div><div class="pprice">$198</div></div>
-      <div class="note-line">By appointment · consultation first · single-use sterile needles · 须预约 · 先咨询 · 一次性无菌针具</div>
-    </div>
-
-    <div class="panel" id="lashes" style="text-align:left">
-      <div class="pgroup">Lash Design 美睫</div>
-      <div class="prow"><div class="pname">Classic 1D</div><div class="pprice">$55</div></div>
-      <div class="prow"><div class="pname">YY Lash</div><div class="pprice">$65</div></div>
-      <div class="prow"><div class="pname">3D Clover Lash</div><div class="pprice">$65</div></div>
-      <div class="prow"><div class="pname">Clover Lash 4D–6D</div><div class="pprice">$78</div></div>
-      <div class="prow"><div class="pname">Fairy / Sunflower style</div><div class="pprice">$78</div></div>
-      <div class="prow"><div class="pname">Manga / Thai style</div><div class="pprice">$78</div></div>
-      <div class="prow"><div class="pname">Wet look</div><div class="pprice">$78</div></div>
-      <div class="pgroup">Add On 另加</div>
-      <div class="prow"><div class="pname">Color lash / Lower Lash</div><div class="pprice">$15 / $20</div></div>
-      <div class="prow"><div class="pname">Wispy / Kim K</div><div class="pprice">$10</div></div>
-      <div class="prow"><div class="pname">Keratin Lash Lift</div><div class="pprice">$55</div></div>
-      <div class="prow"><div class="pname">Removal only / With new set</div><div class="pprice">$15 / $10</div></div>
-      <div class="note-line">⚠️ 美睫价格来自之前那张菜单 — 如有更新请告诉我 / Lash prices from your earlier menu — tell me if updated.</div>
-    </div>
-
-    <div class="panel" id="nails" style="text-align:left">
-      <div class="pgroup">Gel Manicure 美甲</div>
-      <div class="prow"><div class="pname">Express Gel Mani <small>快速手胶美甲 (cut, shape, 1 color)</small></div><div class="pprice">$25</div></div>
-      <div class="prow"><div class="pname">Classic Gel Mani <small>全套手胶美甲 (cut, shape, max 2 color)</small></div><div class="pprice">$40</div></div>
-      <div class="prow"><div class="pname">Express Gel + Design <small>快速手胶 + 设计</small></div><div class="pprice">$40/$55/$65+</div></div>
-      <div class="prow"><div class="pname">Classic Gel + Design <small>全套手胶 + 设计</small></div><div class="pprice">$55/$65/$75+</div></div>
-      <div class="prow"><div class="pname">Gel Extension <small>全贴延长</small></div><div class="pprice">+$25 set</div></div>
-      <div class="prow"><div class="pname">Half Tip Extension <small>半贴延长</small></div><div class="pprice">+$35 set</div></div>
-      <div class="prow"><div class="pname">Soft / Hard Gel Overlay <small>软胶 / 硬胶加固</small></div><div class="pprice">+$10/$20 set</div></div>
-      <div class="pgroup">Removals 卸甲</div>
-      <div class="prow"><div class="pname">Removal only (Gel) <small>卸甲凝胶</small></div><div class="pprice">$15</div></div>
-      <div class="prow"><div class="pname">Removal (Overlay / Extension) <small>卸加固 / 延长</small></div><div class="pprice">$25</div></div>
-      <div class="note-line">⚠️ 美甲价格来自之前那张菜单 — 如有更新请告诉我 / Nail prices from your earlier menu — tell me if updated.</div>
+    <div style="margin-top:38px">
+      <a href="pricing.html" class="btn btn-ghost">View full price list · 查看完整价目表 →</a>
     </div>
   </div>
 </section>
@@ -430,7 +183,7 @@
 <footer>
   <div class="wrap">
     <div class="brand">IDEAL STUDIO</div>
-    <div class="fl"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#book">Book</a><a href="#contact">Contact</a></div>
+    <div class="fl"><a href="#services">Services</a><a href="pricing.html">Pricing</a><a href="#book">Book</a><a href="#contact">Contact</a></div>
     <div style="font-size:13px;color:#F3B8D0">No membership · No package · Transparent price · 无会员 · 无配套 · 价格透明</div>
     <small>© IDEAL STUDIO · Facial · Brows · Lashes · Nails — preview built for review</small>
   </div>
@@ -445,19 +198,9 @@
   function waLink(msg){ return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg); }
   document.getElementById('wa').href = waLink("Hi IDEAL STUDIO! I'd like to ask about a booking 😊");
   document.getElementById('wa-float').href = waLink("Hi IDEAL STUDIO! 我想咨询预约 😊");
-  document.querySelector('.btn-wa[href="#wa"]') && (document.querySelector('a.btn-wa[href="#wa"]').href = waLink("Hi IDEAL STUDIO! 我想咨询预约 😊"));
+  var heroWa=document.querySelector('a.btn-wa[href="#wa"]'); if(heroWa) heroWa.href=waLink("Hi IDEAL STUDIO! 我想咨询预约 😊");
 
-  // tabs
-  document.querySelectorAll('.tab').forEach(function(t){
-    t.onclick=function(){
-      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-      document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      document.getElementById(t.dataset.tab).classList.add('active');
-    };
-  });
-
-  // slots
+  // booking slots
   var picked=null;
   document.querySelectorAll('.slot:not(.gone)').forEach(function(s){
     s.onclick=function(){
@@ -465,11 +208,8 @@
       s.classList.add('sel'); picked=s.textContent;
     };
   });
-
-  // default date = tomorrow
   var d=new Date(); d.setDate(d.getDate()+1);
   document.getElementById('bk-date').value = d.toISOString().slice(0,10);
-
   document.getElementById('bk-go').onclick=function(){
     var svc=document.getElementById('bk-service').value;
     var date=document.getElementById('bk-date').value;
