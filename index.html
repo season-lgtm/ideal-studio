@@ -9,9 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --rose:#E27BA0; --rose-deep:#D85F8C; --magenta:#C92E6B;
-    --ink:#332E30; --sub:#8a8186; --line:#f1dde6; --tint:#FCF1F6; --tint2:#FBE6EE;
-    --cream:#FFF9FB;
+    --rose:#AE927A; --rose-deep:#8A6F57; --magenta:#3A332D;
+    --ink:#3A332D; --sub:#9b9186; --line:#E9DFD2; --tint:#F4EDE3; --tint2:#EDE2D4;
+    --cream:#FBF7F1; --wa:#5E9277;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -20,12 +20,12 @@
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:1140px;margin:0 auto;padding:0 22px;}
   .cn{font-family:'Noto Sans SC',sans-serif;}
-  .script{font-family:'Pacifico',cursive;color:var(--rose);}
+  .script{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;color:var(--rose-deep);}
   .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;
     padding:13px 24px;border-radius:40px;cursor:pointer;border:none;transition:.2s;white-space:nowrap;}
-  .btn-primary{background:var(--rose);color:#fff;}
-  .btn-primary:hover{background:var(--rose-deep);}
-  .btn-wa{background:#25D366;color:#fff;}
+  .btn-primary{background:var(--magenta);color:#F4ECE0;letter-spacing:.5px;}
+  .btn-primary:hover{background:#51463C;}
+  .btn-wa{background:var(--wa);color:#fff;}
   .btn-wa:hover{filter:brightness(.95);}
   .btn-ghost{background:#fff;color:var(--rose-deep);border:1.5px solid var(--rose);}
   .btn-ghost:hover{background:var(--tint);}
@@ -40,7 +40,7 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
   .brand{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:5px;font-size:19px;color:var(--ink);}
-  .brand small{display:block;font-family:'Pacifico',cursive;letter-spacing:0;font-size:13px;color:var(--rose);font-weight:400;margin-top:-4px;}
+  .brand small{display:block;font-family:'Playfair Display',serif;font-style:italic;letter-spacing:1px;font-size:13px;color:var(--rose-deep);font-weight:400;margin-top:-2px;}
   .navlinks{display:flex;align-items:center;gap:28px;}
   .navlinks a{font-size:14.5px;font-weight:500;color:#5b5458;}
   .navlinks a:hover{color:var(--rose-deep);}
@@ -138,7 +138,7 @@
   footer .fl a{font-size:13.5px;color:#cbbfc4;}
   footer small{font-size:12px;opacity:.6;display:block;margin-top:10px;}
 
-  .float-wa{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(37,211,102,.45);}
+  .float-wa{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(94,146,119,.4);}
 
   @media(max-width:860px){
     .hero-grid,.book-grid,.contact-grid{grid-template-columns:1fr;}
@@ -192,17 +192,17 @@
     <div class="hero-art">
       <div class="blob">
         <svg width="240" height="220" viewBox="0 0 270 240" fill="none">
-          <g stroke="#D85F8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M150 60 q-8 -34 30 -40 q44 -6 56 26 q8 22 -6 36" fill="#FBE6EE"/>
-            <path d="M236 46 q22 -10 24 8 q2 16 -18 14 q8 -12 -6 -22Z" fill="#F7D5E2"/>
-            <path d="M150 70 q-22 22 -16 60 q6 40 46 50 q44 10 64 -22 q16 -28 6 -64 q-8 -28 -40 -34 q-40 -8 -60 10Z" fill="#FFF3F7"/>
+          <g stroke="#8A6F57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M150 60 q-8 -34 30 -40 q44 -6 56 26 q8 22 -6 36" fill="#EFE3D4"/>
+            <path d="M236 46 q22 -10 24 8 q2 16 -18 14 q8 -12 -6 -22Z" fill="#E7D7C3"/>
+            <path d="M150 70 q-22 22 -16 60 q6 40 46 50 q44 10 64 -22 q16 -28 6 -64 q-8 -28 -40 -34 q-40 -8 -60 10Z" fill="#FAF4EC"/>
             <path d="M168 120 q10 8 22 0"/><path d="M205 120 q10 8 22 0"/>
-            <circle cx="166" cy="150" r="8" fill="#F8C9DA" stroke="none"/>
-            <circle cx="230" cy="150" r="8" fill="#F8C9DA" stroke="none"/>
+            <circle cx="166" cy="150" r="8" fill="#E3CDB6" stroke="none"/>
+            <circle cx="230" cy="150" r="8" fill="#E3CDB6" stroke="none"/>
             <path d="M186 158 q14 12 28 0"/>
-            <path d="M150 168 q-18 6 -22 26 q-2 14 10 18 q4 -16 18 -22 q10 -4 14 -14" fill="#FFF3F7"/>
+            <path d="M150 168 q-18 6 -22 26 q-2 14 10 18 q4 -16 18 -22 q10 -4 14 -14" fill="#FAF4EC"/>
           </g>
-          <g fill="#EFA8C6"><path d="M60 40 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5Z"/><circle cx="40" cy="150" r="5"/><circle cx="240" cy="180" r="6"/></g>
+          <g fill="#C9B49B"><path d="M60 40 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5Z"/><circle cx="40" cy="150" r="5"/><circle cx="240" cy="180" r="6"/></g>
         </svg>
       </div>
     </div>
@@ -225,25 +225,25 @@
     <p class="lead">We focus on what actually shows results — and we'll tell you what to skip.</p>
     <div class="cards" style="text-align:left">
       <div class="card">
-        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D85F8C" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M9 11q3 3 6 0" stroke-linecap="round"/><circle cx="9.5" cy="9.5" r=".6" fill="#D85F8C"/><circle cx="14.5" cy="9.5" r=".6" fill="#D85F8C"/></svg></div>
+        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8A6F57" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M9 11q3 3 6 0" stroke-linecap="round"/><circle cx="9.5" cy="9.5" r=".6" fill="#D85F8C"/><circle cx="14.5" cy="9.5" r=".6" fill="#D85F8C"/></svg></div>
         <h3>Facial <span class="cn">面部护理</span></h3>
         <p>Deep cleansing, hydration, anti-acne, lifting & bojin — with add-on boosters only if your skin needs them.</p>
         <div class="from">from $48</div>
       </div>
       <div class="card">
-        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D85F8C" stroke-width="1.6"><path d="M4 13q6 -6 16 -3" stroke-linecap="round"/><path d="M5 12.4l-1 -1 M8 11.2l-.6 -1.3 M11 10.6l-.2 -1.4 M14 10.6l.3 -1.3 M17 11.1l.7 -1.2" stroke-linecap="round"/></svg></div>
+        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8A6F57" stroke-width="1.6"><path d="M4 13q6 -6 16 -3" stroke-linecap="round"/><path d="M5 12.4l-1 -1 M8 11.2l-.6 -1.3 M11 10.6l-.2 -1.4 M14 10.6l.3 -1.3 M17 11.1l.7 -1.2" stroke-linecap="round"/></svg></div>
         <h3>Brows / PMU <span class="cn">纹眉</span></h3>
         <p>Natural semi-permanent brows, eyeliner & lips — microblading, powder, combo. Includes one touch-up.</p>
         <div class="from">from $188</div>
       </div>
       <div class="card">
-        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D85F8C" stroke-width="1.6"><path d="M3 15q9 -7 18 0" stroke-linecap="round"/><path d="M6 13l-1 -3 M10 11.3l-.5 -3.3 M14 11.3l.6 -3.3 M18 13l1 -3" stroke-linecap="round"/></svg></div>
+        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8A6F57" stroke-width="1.6"><path d="M3 15q9 -7 18 0" stroke-linecap="round"/><path d="M6 13l-1 -3 M10 11.3l-.5 -3.3 M14 11.3l.6 -3.3 M18 13l1 -3" stroke-linecap="round"/></svg></div>
         <h3>Lashes <span class="cn">美睫</span></h3>
         <p>Classic, volume, clover, fairy, manga & wet-look lash styles, plus lash lift and colour add-ons.</p>
         <div class="from">from $55</div>
       </div>
       <div class="card">
-        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D85F8C" stroke-width="1.6"><rect x="9" y="4" width="6" height="14" rx="3"/><path d="M9 8q3 -2 6 0" /><path d="M10 4q2 -1 4 0"/></svg></div>
+        <div class="ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8A6F57" stroke-width="1.6"><rect x="9" y="4" width="6" height="14" rx="3"/><path d="M9 8q3 -2 6 0" /><path d="M10 4q2 -1 4 0"/></svg></div>
         <h3>Nails <span class="cn">美甲</span></h3>
         <p>Express & classic gel manicure, designs, extensions and overlays — clean, long-lasting finishes.</p>
         <div class="from">from $25</div>
@@ -404,7 +404,7 @@
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="center"><span class="eyebrow" style="color:#FBD3E2">Visit / Contact</span>
+    <div class="center"><span class="eyebrow" style="color:#D8C7B0">Visit / Contact</span>
     <h2 class="h2">Come say hi</h2></div>
     <div class="contact-grid">
       <div>
@@ -431,7 +431,7 @@
   <div class="wrap">
     <div class="brand">IDEAL STUDIO</div>
     <div class="fl"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#book">Book</a><a href="#contact">Contact</a></div>
-    <div style="font-size:13px;color:#e6a8c2">No membership · No package · Transparent price · 无会员 · 无配套 · 价格透明</div>
+    <div style="font-size:13px;color:#C7B8A4">No membership · No package · Transparent price · 无会员 · 无配套 · 价格透明</div>
     <small>© IDEAL STUDIO · Facial · Brows · Lashes · Nails — preview built for review</small>
   </div>
 </footer>
